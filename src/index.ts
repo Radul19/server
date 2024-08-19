@@ -1,16 +1,29 @@
-import express, { Request, Response } from 'express'
-
+import express from 'express'
+import routeGuest from './routes/guest.routes'
+import routeEvent from './routes/event.routes'
+import routeUser from './routes/user.routes'
+//@ts-ignore
+import cors from 'cors'
+import './db'
 const app = express()
-const port = process.env.PORT || 8080
 
-app.get('/', (_req: Request, res: Response) => {
-  return res.send('Express Typescript on Vercel')
+app.use(express.urlencoded({ limit: '50mb', extended: true }));
+app.use(express.json({ limit: '50mb' }));
+app.use(cors({
+    origin: "*",
+}));
+
+
+
+app.use(routeEvent)
+app.use(routeUser)
+app.use(routeGuest)
+
+app.listen(process.env.PORT || 4000, () => {
+    console.log('Server listen on port', 4000)
 })
 
-app.get('/ping', (_req: Request, res: Response) => {
-  return res.send('pong 🏓')
-})
-
-app.listen(port, () => {
-  return console.log(`Server is listening on ${port}`)
-})
+// TO DO ✅ ❌ ⏳ ❓
+/**
+ * 
+ */
