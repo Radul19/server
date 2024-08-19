@@ -1,0 +1,1 @@
+{"version":3,"file":"adminSchema.js","sourceRoot":"","sources":["../../src/models/adminSchema.ts"],"names":[],"mappings":";;AAAA,uCAAqD;AAErD,MAAM,WAAW,GAAG,IAAI,iBAAM,CAAC;IAC3B,QAAQ,EAAE,MAAM;IAChB,QAAQ,EAAE,MAAM;CACnB,EACG;IACI,UAAU,EAAE,IAAI;CACnB,CACJ,CAAC;AAEF,kBAAe,IAAA,gBAAK,EAAC,OAAO,EAAE,WAAW,CAAC,CAAA"}
